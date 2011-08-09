@@ -1,0 +1,17 @@
+%h1 Sign Up
+= form_tag users_path do
+  .field
+    = label :user, :username
+    = text_field :user, :username
+  .field
+    = label :user, :email_address
+    = text_field :user, :email_address
+  .field
+    = label :user, :password
+    = password_field :user, :password
+  .field
+    = label :user, :confirm_password
+    = password_field :user, :confirm_password
+  .field
+    = submit_tag "Sign Up"
+

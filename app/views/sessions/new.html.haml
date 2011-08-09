@@ -1,0 +1,11 @@
+%h1 Login
+
+= form_tag "/login" do
+  .field
+    = label_tag :username
+    = text_field_tag :username
+  .field
+    = label_tag :password
+    = password_field_tag :password
+  .field
+    = submit_tag "Log In"
