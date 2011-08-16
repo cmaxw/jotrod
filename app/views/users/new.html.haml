@@ -1,17 +1,22 @@
 %h1 Sign Up
-= form_tag users_path do
+= form_for @user do |f|
+  - if @user.errors.any?
+    %ul
+      - @user.errors.full_messages.each do |msg|
+        %li
+          = msg
   .field
-    = label :user, :username
-    = text_field :user, :username
+    = f.label :username
+    = f.text_field :username
   .field
-    = label :user, :email_address
-    = text_field :user, :email_address
+    = f.label :email_address
+    = f.text_field :email_address
   .field
-    = label :user, :password
-    = password_field :user, :password
+    = f.label :password
+    = f.password_field :password
   .field
-    = label :user, :confirm_password
-    = password_field :user, :confirm_password
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
   .field
     = submit_tag "Sign Up"
 

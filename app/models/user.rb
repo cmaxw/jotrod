@@ -1,7 +1,11 @@
 class User
   include Sandra
 
-  key_attribute "username"
+  validates_confirmation_of :password
+
+  key_attribute :username
+  column :email_address
+  column :password
 
   def insert(key, columns = {})
     columns.stringify_keys!

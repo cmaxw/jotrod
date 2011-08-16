@@ -2,6 +2,7 @@ PATH
   remote: ../sandra
   specs:
     sandra (0.1.0)
+      activemodel
       cassandra
 
 GEM
