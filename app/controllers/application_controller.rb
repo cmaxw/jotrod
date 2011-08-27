@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def current_user
-    User.get(session[:current_user]) if session[:current_user]
+    @current_user ||= User.get(session[:current_user]) if session[:current_user]
   end
 
   def logged_in
@@ -11,5 +11,6 @@ class ApplicationController < ActionController::Base
       flash[:error] = "You must be logged in to see that page."
       redirect_to login_path
     end
+    logger.info current_user.inspect
   end
 end

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :logged_in, :only => [:home, :edit, :update]
+
   def index
     
   end

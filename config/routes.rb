@@ -1,4 +1,6 @@
 TwitterClone::Application.routes.draw do
+  get "jots/show"
+
   get "home", :to => "users#home"
   get "welcome/index"
 
@@ -6,6 +8,7 @@ TwitterClone::Application.routes.draw do
 
   get "login", :to => "sessions#new"
   post "login", :to => "sessions#create"
+  post "logout", :to => "sessions#destroy"
 
   resources :sessions
   resources :users
