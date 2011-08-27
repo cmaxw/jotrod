@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     @user = User.get(params[:username])
     if @user && @user.password == params[:password]
       session[:current_user] = @user.username
+      logger.info @user.inspect
       redirect_to root_path
     else
       flash[:error] = "Username or Password is incorrect"
