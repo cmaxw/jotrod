@@ -10,6 +10,7 @@ TwitterClone::Application.routes.draw do
   post "login", :to => "sessions#create"
   post "logout", :to => "sessions#destroy"
 
+  resources :jots
   resources :sessions
   resources :users
 

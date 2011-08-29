@@ -27,6 +27,6 @@ class UsersController < ApplicationController
   end
 
   def home
-
+    @jots = Jot.range(:key_count => 20)
   end
 end
