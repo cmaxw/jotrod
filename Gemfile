@@ -7,6 +7,7 @@ gem 'rails', '3.0.9'
 
 # gem 'sqlite3'
 gem 'sandra', :path => '../sandra'
+gem 'sandra-rails', :path => '../sandra-rails'
 gem 'cassandra'
 gem 'rake', '~> 0.8.7'
 gem 'haml-rails'

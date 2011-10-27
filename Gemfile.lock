@@ -5,6 +5,14 @@ PATH
       activemodel
       cassandra
 
+PATH
+  remote: ../sandra-rails
+  specs:
+    sandra-rails (0.0.1)
+      actionpack (~> 3.0.0)
+      railties (~> 3.0.0)
+      sandra
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -125,4 +133,5 @@ DEPENDENCIES
   rspec-rails
   ruby-debug
   sandra!
+  sandra-rails!
   sass

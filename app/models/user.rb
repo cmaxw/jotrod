@@ -3,9 +3,9 @@ class User
 
   validates_confirmation_of :password
 
-  key_attribute :username
-  column :email_address
-  column :password
+  key_attribute :username, :string
+  column :email_address, :string
+  column :password, :string
 
   def insert(key, columns = {})
     columns.stringify_keys!

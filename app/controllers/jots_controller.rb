@@ -9,7 +9,8 @@ class JotsController < ApplicationController
     @jot = Jot.new(params[:jot])
 
     if @jot.save
-      render :text => "success"
+      # render :text => "success"
+      redirect_to '/home'
     else
       render :text => "failure"
     end
