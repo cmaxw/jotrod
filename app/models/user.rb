@@ -7,6 +7,8 @@ class User
   column :email_address, :string
   column :password, :string
 
+  list :followers, :User
+
   def insert(key, columns = {})
     columns.stringify_keys!
     if columns['confirm_password'] == columns['password']
