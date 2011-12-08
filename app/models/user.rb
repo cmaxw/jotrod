@@ -8,6 +8,7 @@ class User
   column :password, :string
 
   list :followers, :User
+  list :following, :User
 
   def insert(key, columns = {})
     columns.stringify_keys!
